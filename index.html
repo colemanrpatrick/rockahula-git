@@ -1,0 +1,414 @@
+<html>
+<head>
+  <meta charset="utf-8"/>
+  <title>rock a hula</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css?family=Oswald|Sonsie+One&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <meta name="viewport" content="user-scalable = yes, width=320, initial-scale=1">
+</head>
+<body>
+  <main>
+    <!-- ======================== main nav ================================== -->
+    <div>
+      <nav class="phone" id="phone">
+        <div>
+          <a href="tel:1-877-357-2480">(toll free) 877 357 2480</a>
+        </div>
+        <div>
+          <a href="tel:1-877-357-2480">(local) 877 357 2480</a>
+        </div>
+      </nav>
+      <div class="main-nav" id="main-nav">
+        <ul>
+          <li><a href="#">home</a></li>
+          <li><a href="#">packages</a></li>
+          <li><a href="#">about</a></li>
+          <li><a href="#">contact</a></li>
+          <li><a href="#">cart</a></li>
+        </ul>
+      </div>
+      <div class="logo">
+        <img src="images/rockAhulaLogo.png" alt="">
+      </div>
+      <button type="button" class="menu-btn" name="button" id="menu-btn" onclick="idToggle('main-nav','active');idToggle('menu-btn','active')">
+        <hr class="menu-btn-hr-1"/>
+        <hr class="menu-btn-hr-2"/>
+        <hr class="menu-btn-hr-3"/>
+      </button>
+    </div>
+    <!-- ================================================================================ -->
+    <div class="checkpoint-first" id="checkpoint-first">
+    <img src="images/palm_img_decor.png" alt="" class="palmImg" id="palmImgLeft">
+    <img src="images/palm_img_decor.png" alt="" class="palmImg" id="palmImgRight">
+      <div id="banner">
+          <div class="banner-section">
+            <div class="img">
+            <img src="images/rockaAhula2.png" alt="">
+            </div>
+            <h1><span>Discounts</span> on<br />
+            <span>Rock 'a' Hula</span>
+            <br />Reservations</h1>
+            <a href="#" id="reservations">reservations</a>
+          </div>
+      </div>
+      <script type="text/javascript">
+      $("#reservations").on("click touchstart",function(){
+        $('html,body').animate({scrollTop:$('#products').offset().top},0800);
+      });
+      </script>
+    </div>
+    <!-- =========================== top container ================================= -->
+    <div class="top-section">
+      <h2>top headline goes here</h2>
+      <div id="playerWrapper">
+        <div id="player"></div>
+      </div>
+      <script>
+      var tag = document.createElement('script');
+
+      tag.src="https://www.youtube.com/iframe_api";
+      var firstScriptTag = document.getElementsByTagName('script')[0];
+      firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+      var player;
+      function onYouTubeIframeAPIReady() {
+        player = new YT.Player('player', {
+          host: 'https://www.youtube.com',
+          rel: '0',
+          videoId: 'lPwVPcHsLVY',
+          events: {
+            'onReady': onPlayerReady,
+            'onStateChange': onPlayerStateChange
+          },
+          playerVars: {
+            rel:0,
+            showInfo:0
+          }
+        });
+      }
+      function onPlayerReady(event) {
+        player.mute();
+        event.target.playVideo();
+      }
+      function onPlayerStateChange(event) {
+        if(player.getPlayerState() === 0){
+          console.log("ended");
+        }
+        if(player.getPlayerState() === 2){
+          console.log("paused");
+          $('.ytp-button.ytp-collapse').click();
+        }
+      }
+      </script>
+      <article>
+        <header>more flavor test goes here</header>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      </article>
+    </div>
+    <!-- ================================================================================ -->
+    <div class="tour">
+      <section>
+        <div class="tour-img">
+          <img src="images/hula-show.jpg" alt="" id="tour-img-1">
+        </div>
+        <article>
+          <div id="triangle-1"></div>
+          <header>header text goes here</header>
+          <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </p>
+        </article>
+      </section>
+    </div>
+    <!-- ================================================================================ -->
+      <div class="tour" id="tour-2">
+        <section>
+          <article>
+            <div id="triangle-2"></div>
+            <header>header text goes here</header>
+            <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </p>
+          </article>
+          <div class="tour-img">
+            <img src="images/cocktail_room.jpg" alt="" id="tour-img-2">
+          </div>
+        </section>
+      </div>
+    <!-- ================================================================================ -->
+    <div class="tour">
+      <section>
+        <div class="tour-img">
+          <img src="images/rockAhulaStage.jpg" alt="" id="tour-img-3">
+        </div>
+        <article>
+          <div id="triangle-3"></div>
+          <header>header text goes here</header>
+          <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </p>
+        </article>
+      </section>
+    </div>
+    <!-- ===================== mid container ==================================== -->
+<div class="checkpoint">
+      <!-- ====================== -->
+      <div class="products">
+        <h3 id="products-h3">select a product below</h3>
+        <!-- ====================== -->
+        <div class="product" id="product-1">
+          <div class="product-img">
+            <img src="images/rockahulashow.jpg" alt="">
+          </div>
+          <div class="product-right">
+            <header>rock'n show package</header>
+            <section>
+              <ul class="details-list">
+              <li>Check in at 7:30 pm</li>
+              <li>General seating in the Mezzanine</li>
+              <li>Rock-A-Hula show (8:00 pm to 9:15 pm)</li>
+              <li>Meet-and-Greet with the cast (until 9:30 pm)</li>
+              </ul>
+              <ul class="prices">
+                <li class="price"> <dl><dd>retail</dd><dt class="strike-thru">$000.00</dt></dl> </li>
+                <li class="price"> <dl><dd>discount</dd><dt class="discount">$000.00</dt></dl> </li>
+                <li class="bookNow"><a href="#">book now</a></li>
+              </ul>
+            </section>
+          </div>
+        </div>
+        <!-- ====================== -->
+        <div class="product" id="product-3">
+          <div class="product-img">
+            <img src="images/rockahulaluau.jpg" alt="">
+          </div>
+          <div class="product-right">
+            <header>Terrace Luau Package</header>
+            <section>
+              <ul class="details-list">
+                <li>Check in at 6:30 pm</li>
+                <li>Hawaiian greeting & welcome Mai Tai drink</li>
+                <li>Premier seating in the Mezzanine</li>
+                <li>Luau buffet dinner View Menu</li>
+                <li>Live Hawaiian music and hula during dinner hour</li>
+                <li>Rock-A-Hula show (8:00 pm to 9:15 pm)</li>
+                <li>Meet-and-Greet with the cast (until 9:30 pm)</li>
+              </ul>
+              <ul class="prices">
+                <li class="price"> <dl><dd>retail</dd><dt class="strike-thru">$000.00</dt></dl> </li>
+                <li class="price"> <dl><dd>discount</dd><dt class="discount">$000.00</dt></dl> </li>
+                <li class="bookNow"><a href="#">book now</a></li>
+              </ul>
+            </section>
+          </div>
+        </div>
+        <!-- ===================== -->
+        <div class="product" id="product-2">
+          <div class="product-img">
+            <img src="images/cocktailPackage2.png" alt="">
+          </div>
+          <div class="product-right">
+            <header>Premier Cocktail Package</header>
+            <section>
+              <ul class="details-list">
+                <li>Check in at 7:30 pm</li>
+                <li>Premier seating in the Mezzanine</li>
+                <li>One super premium beverage</li>
+                <li>Rock-A-Hula show (8:00 pm to 9:15 pm)</li>
+                <li>Meet-and-Greet with the cast (until 9:30 pm)</li>
+              </ul>
+              <ul class="prices">
+                <li class="price"> <dl><dd>retail</dd><dt class="strike-thru">$000.00</dt></dl> </li>
+                <li class="price"> <dl><dd>discount</dd><dt class="discount">$000.00</dt></dl> </li>
+                <li class="bookNow"><a href="#">book now</a></li>
+              </ul>
+            </section>
+          </div>
+        </div>
+        <!-- ====================== -->
+        <!-- ====================== -->
+        <div class="product" id="product-4">
+          <div class="product-img">
+            <img src="images/stageSideVip.jpg" alt="">
+          </div>
+          <div class="product-right">
+            <header>Stageside VIP Package</header>
+            <section>
+              <ul class="details-list">
+                <li>Check in at 6:15 pm</li>
+                <li>Hawaiian greeting & welcome Mai Tai drink</li>
+                <li>VIP welcome reception</li>
+                <li>Private table in stageside VIP area</li>
+                <li>One additional super premium beverage</li>
+                <li>4-Course Steak & Seafood Dinner View Menu</li>
+                <li>Rock-A-Hula show (8:00 pm to 9:15 pm)</li>
+                <li>Meet-and-Greet with the cast (until 9:30 pm)</li>
+              </ul>
+              <ul class="prices">
+                <li class="price"> <dl><dd>retail</dd><dt class="strike-thru">$000.00</dt></dl> </li>
+                <li class="price"> <dl><dd>discount</dd><dt class="discount">$000.00</dt></dl> </li>
+                <li class="bookNow"><a href="#">book now</a></li>
+              </ul>
+            </section>
+          </div>
+        </div>
+        <!-- ====================== -->
+        <div class="product" id="product-5">
+          <div class="product-img">
+            <img src="images/VIPpackage.png" alt="">
+          </div>
+          <div class="product-right">
+            <header>Green Room Package</header>
+            <section>
+              <ul class="details-list">
+                <li>Check in at 6:00 pm , Rock-A-Hula show (8:00 pm to 9:15 pm)</li>
+                <li>Souvenir photo with Legends Artist (one per 2 persons)</li>
+                <li>Green Room reception and exclusive backstage tour</li>
+                <li>Two super premium beverages (Green “Champagne” and one beverage of choice)</li>
+                <li>4-Course Steak & Seafood Dinner View Menu</li>
+                <li>Best private table in stageside VIP area</li>
+                <li>Meet-and-Greet with the cast (until 9:30 pm)</li>
+              </ul>
+              <ul class="prices">
+                <li class="price"> <dl><dd>retail</dd><dt class="strike-thru">$000.00</dt></dl> </li>
+                <li class="price"> <dl><dd>discount</dd><dt class="discount">$000.00</dt></dl> </li>
+                <li class="bookNow"><a href="#">book now</a></li>
+              </ul>
+            </section>
+          </div>
+        </div>
+        <!-- ====================== -->
+      </div>
+      <!-- ====================== -->
+    </div>
+    <!-- ============================= bottom container ========================================= -->
+    <div class="review-section">
+      <h2>trip advisor reviews</h2>
+      <div class="review">
+        <ul>
+          <li><i class="material-icons">radio_button_checked</i></li>
+          <li><i class="material-icons">radio_button_checked</i></li>
+          <li><i class="material-icons">radio_button_checked</i></li>
+          <li><i class="material-icons">radio_button_checked</i></li>
+          <li><i class="material-icons">radio_button_checked</i></li>
+        </ul>
+        <header>Rock A Hula Luau</header>
+        <p>"We had a great time.The food and entertainment was excellent. It is definitely something to see in Honolulu. The dancers were great."</p>
+        <p>Date of experience: <b>February 2020</b></p>
+      </div>
+      <div class="review">
+        <ul>
+          <li><i class="material-icons">radio_button_checked</i></li>
+          <li><i class="material-icons">radio_button_checked</i></li>
+          <li><i class="material-icons">radio_button_checked</i></li>
+          <li><i class="material-icons">radio_button_checked</i></li>
+          <li><i class="material-icons">radio_button_checked</i></li>
+        </ul>
+        <header>Amazing show</header>
+        <p>"The rock a hula show was amazing. Worth the price. I would suggest it if you love Elvis and Michael Jackson !!!! Also the fire show is amazing !!!!!!!! And the one female singer is just such a wonderful singer !!! Please visit this"</p>
+        <p>Date of experience: <b>February 2020</b></p>
+      </div>
+      <div class="review">
+        <ul>
+          <li><i class="material-icons">radio_button_checked</i></li>
+          <li><i class="material-icons">radio_button_checked</i></li>
+          <li><i class="material-icons">radio_button_checked</i></li>
+          <li><i class="material-icons">radio_button_checked</i></li>
+          <li><i class="material-icons">radio_button_checked</i></li>
+        </ul>
+        <header>Great Dinner and Show</header>
+        <p>"Did the Green Room package that included a behind the scenes tour and picture with a cast member. The show was fantastic with the actors interacting with the audience throughout the show. Thank you for a Merry Christmas Eve."</p>
+      </div>
+    </div>
+    <!-- ===================================================== -->
+      <!-- ========================================= -->
+        <!-- ============ -->
+      <div class="coverage-section">
+        <h2>why book with us</h2>
+        <ul>
+          <li id="c-1">
+            <section>
+              <header>
+                <div class="icon">
+                <i class="material-icons icon-first">laptop</i>
+                <i class="material-icons icon-second">lock</i>
+              </div>
+                <span>safe and<br>secure</span>
+              </header>
+              <p>Online booking system with validated privacy protection</p>
+            </section>
+          </li>
+          <li id="c-2">
+            <section>
+              <header>
+                <div class="icon">
+                  <i class="material-icons icon-first">event</i>
+                  <i class="material-icons icon-second">call</i>
+                </div>
+                <span>same-day<br>booking</span>
+              </header>
+              <p>Receive a full refund if cancellation is made at least 48 hours in advance</p>
+            </section>
+          </li>
+          <li id="c-3">
+            <section>
+
+            <header>
+              <div class="icon">
+                <i class="material-icons icon-first">sentiment_satisfied_alt</i>
+              </div>
+              <span>friendly<br>support</span>
+            </header>
+            <p>Receive your voucher the same day after booking your activity</p>
+            </section>
+          </li>
+        </ul>
+      </div>
+      <script type="text/javascript">
+        (function() {
+          'use strict';
+          
+        }());
+      </script>
+      <!-- ======== footer ========== -->
+      <footer class="footer">
+        <ul>
+          <li class="footer-main">
+            <img id="footer-logo" src="images/rockAhulaLogo.png" alt="">
+            <a href="tel:1-877-357-2480" class="footer-phone">(toll free) 877 357 2480</a>
+            <hr>
+            <a href="tel:1-877-357-2480" class="footer-phone">(local) 877 357 2480</a>
+            <div class="social">
+              <a href="#"> <img src="images/facebook_twitter_youtube_instagram.png" alt="" id="social-fb">  </a>
+              <a href="#"> <img src="images/facebook_twitter_youtube_instagram.png" alt="" id="social-tw">  </a>
+              <a href="#"> <img src="images/facebook_twitter_youtube_instagram.png" alt="" id="social-yt">  </a>
+              <a href="#"> <img src="images/facebook_twitter_youtube_instagram.png" alt="" id="social-ig">  </a>
+            </div>
+          </li>
+          <li class="footer-nav">
+            <a href="#">home</a>
+            <hr>
+            <a href="#">packages</a>
+            <hr>
+            <a href="#">about</a>
+            <hr>
+            <a href="#">contact</a>
+            <hr>
+            <a href="#">cart</a>
+            <hr>
+          </li>
+          <li class="footer-nav">
+            <a href="#">site map</a>
+            <hr>
+            <a href="#">privacy policy</a>
+            <hr>
+            <a href="#">terms</a>
+            <hr>
+            <a href="#">login</a>
+            <hr>
+          </li>
+        </ul>
+        <p>Copyright (c) 2018 Copyright Holder All Rights Reserved.</p>
+      </footer>
+    <!-- ===================================================== -->
+    <script type="text/javascript" src="toggle.js"></script>
+    <script type="text/javascript" src="checkpoint.js"></script>
+</main>
+</body>
+</html>
